@@ -6,4 +6,4 @@
 	url = https://github.com/project8/monarch
 [submodule "dripline-cpp"]
 	path = dripline-cpp
-	url = https://github.com/project8/dripline-cpp
+	url = https://github.com/driplineorg/dripline-cpp

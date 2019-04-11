@@ -25,7 +25,7 @@ namespace psyllid
     {
         scarab::param_node t_msg = scarab::param_node();
         t_msg.add( "message", scarab::param_value( a_msg_text ) );
-        dripline::relayer::send_async( dripline::msg_alert::create( t_msg, "status_message.notice.psyllid" ) );
+        dripline::relayer::send_async( dripline::msg_alert::create( t_msg.clone(), "status_message.notice.psyllid" ) );
         return;
     }
 
@@ -33,7 +33,7 @@ namespace psyllid
     {
         scarab::param_node t_msg = scarab::param_node();
         t_msg.add( "message", scarab::param_value( a_msg_text ) );
-        send_async( dripline::msg_alert::create( t_msg, "status_message.warning.psyllid" ) );
+        send_async( dripline::msg_alert::create( t_msg.clone(), "status_message.warning.psyllid" ) );
         return;
     }
 
@@ -41,7 +41,7 @@ namespace psyllid
     {
         scarab::param_node t_msg = scarab::param_node();
         t_msg.add( "message", scarab::param_value( a_msg_text ) );
-        send_async( dripline::msg_alert::create( t_msg, "status_message.error.psyllid" ) );
+        send_async( dripline::msg_alert::create( t_msg.clone(), "status_message.error.psyllid" ) );
         return;
     }
 
@@ -49,7 +49,7 @@ namespace psyllid
     {
         scarab::param_node t_msg = scarab::param_node();
         t_msg.add( "message", scarab::param_value( a_msg_text ) );
-        send_async( dripline::msg_alert::create( t_msg, "status_message.critical.psyllid" ) );
+        send_async( dripline::msg_alert::create( t_msg.clone(), "status_message.critical.psyllid" ) );
         return;
     }
 
